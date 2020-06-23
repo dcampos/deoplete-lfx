@@ -29,8 +29,8 @@ class Source(Base):
         self.vim.funcs.ULF_complete({
             'target': 'deoplete#source#ulf#_results',
             'callback': 'deoplete#ulf#callback',
-            'include_results': False
+            'include_results': False,
+            'process_response': True
         })
-        # self.vim.funcs.ULF_send_request('deoplete/completion')
 
         return []
